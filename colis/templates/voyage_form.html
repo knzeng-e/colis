@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<hr>
+<h1 style="text-align: center"><em>PROPOSER UN TRAJET</em></h1>
+<hr>
+
+<form class="form-vertical" action="" method="post">
+	{% csrf_token %}
+	{% include '/templates/form-template.html' %}
+	<div class = "form-group">
+		<div class = "col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-success ">Valider</button> 
+		</div>
+	</div>
+
+</form>
+
+{% endblock %}

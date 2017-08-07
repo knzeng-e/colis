@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="text-align: center" class="liste_clients">
+<h1> Liste des clients </h1>
+<hr/>
+<ul>
+{% for user in users %}
+	<li>
+	<img style = "width: 184px; height: 142px;" src = "{{user.photo}}"/>
+		<em><strong style =" text-decoration: underline; font-family: Times New Roman, Georgia, Serif;">
+		<br/>{{user.id}} - {{user.prenom}}  {{user.nom}}</strong></em>
+
+		<ul>
+			<li>Date de naissance: {{user.date_de_naissance}}<li>
+			<li>Sexe : {{user.sexe}}</li>
+			<li>Tel : 0{{user.telephone}}</li>
+			<li>email : {{user.email}}</li>
+		</ul>
+	</li>
+	<hr/>
+
+{% endfor %}
+
+</ul>
+</div>
+{% endblock content%}

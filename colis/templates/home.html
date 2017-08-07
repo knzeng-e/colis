@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="container">
+
+          <div class="row head3 ">
+            <div class="col-sm-12 ">
+
+            <div class="btn-group">
+                        
+                        <a href="/Rechercher"><button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light profile">E n v o y e r    <span class="m-l-5"><i class="md md-accessibility"></i></span></button></a>
+                        
+                  
+                        <a href = "{% url 'travel-add'%}" ><button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light profile">P r o p o s e r<span class="m-l-5"><i class="md md-accessibility"></i></span></button></a>
+                
+
+                   <!-- <form class="form-inline" role="form">
+                       <div class="form-group">
+                           <input type="text" class="form-control" placeholder="Pays de départ">
+                       </div>
+
+                       <div class="form-group m-l-10">
+                           <input type="text" class="form-control" placeholder="Pays d'arrivée">
+                       </div>
+                       <div class="form-group m-l-10">
+                           <input type="date" class="form-control" placeholder="Date">
+                       </div>
+                       <button type="submit" class="btn btn-success waves-effect waves-light m-l-10 btn-md">Chercher Trajet</button>
+                   </form> -->
+            </div>
+          </div>
+          <br/>
+          <div class="row me-row content-ct">
+            <h2 class="row-title">Pourquoi covaliser ?</h2>
+            <div class="col-md-4 feature">
+              <span class="ti-face-smile"></span>
+              <h3>Convivial</h3>
+              <p>Rendre service et partager ses frais</p>
+            </div>
+            <div class="col-md-4 feature">
+              <span class="ti-shine"></span>
+              <h3>Ecologique</h3>
+              <p>Réduction des gaz à effets de serre</p>
+            </div>
+            <div class="col-md-4 feature">
+              <span class="ti-world"></span>
+              <h3>Faites des rencontres!</h3>
+              <p>Rencontrez des gens de tous les horizons</p>
+            </div>
+          </div>
+
+             <!-- Start: Speakers -->
+        <div class="row me-row content-ct speaker">
+          <h2 class="row-title">Plusieurs départs chaque jour</h2>
+          <div class="col-md-4 col-sm-6 feature" style="background-color: #99ffcc">
+          <img src= "{% static "colis/assets/images/dakar.png" %}" class="speaker-img">
+
+            <h3>Paris - Dakar</h3>
+            <p>A partir de 10€ le kilo</p>
+          </div>
+          <div class="col-md-4 col-sm-6 feature" style="background-color: #99ffcc">
+            <img src="{% static "colis/assets/images/dakar.png" %}" class="speaker-img">
+            <h3>Londres - Douala</h3>
+            <p>A partir de 11€ le kilo</p>
+          </div>
+          <div class="col-md-4 col-sm-6 feature" style="background-color: #99ffcc">
+             <img src="{% static "colis/assets/images/dakar.png" %}" class="speaker-img">
+            <h3>Stockholm - Accra</h3>
+            <p>A partir de 13€ le kilo</p>
+          </div>
+        </div>
+{% endblock content %}
