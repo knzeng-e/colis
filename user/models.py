@@ -47,8 +47,5 @@ class Voyage(models.Model):
 	date_arrivee = models.DateField()
 	id_profil = models.ForeignKey('User')
 
-	def get_absolute_url(self):
-		return reverse('user:search_travel', kwargs = {'pk': self.pk})
-
 	def __str__(self):
 		return "%s %s -- %s -> %s" %(self.id_profil.prenom, self.id_profil.nom, self.lieu_depart, self.lieu_arrivee)

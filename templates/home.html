@@ -1,6 +1,34 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header %}
+      <header id="topnav">
+            <div class="topbar-main">
+                <div class="container">
+
+                    <!-- Logo container-->
+                    <div class="logo">
+                        <a href="Accueil" class="logo"><span>C<i
+                                class="md md-album"></i>valisage</span></a>
+                    </div>
+                    <!-- End Logo container-->
+                    <div class="menu-extras">
+                        <ul class="nav navbar-nav navbar-right pull-right">
+                            <li>
+                                <a href = "{% url 'travel-add'%}" ><button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light profile">Proposer un trajet<span class="m-l-5"><i class="md md-accessibility"></i></span></button></a>
+                            </li>
+                            <li>
+                                <a href="/Inscription" class="dropdown-toggle waves-effect waves-light profile">Inscription </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-toggle waves-effect waves-light profile">Connexion </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+{% endblock header%}
+
 {% block content %}
         <div class="container">
 
@@ -9,13 +37,10 @@
 
             <div class="btn-group">
                         
-                        <a href="/Rechercher"><button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light profile">E n v o y e r    <span class="m-l-5"><i class="md md-accessibility"></i></span></button></a>
-                        
-                  
-                        <a href = "{% url 'travel-add'%}" ><button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light profile">P r o p o s e r<span class="m-l-5"><i class="md md-accessibility"></i></span></button></a>
-                
+                     <!--    <a href="/Rechercher"><button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light profile">E n v o y e r    <span class="m-l-5"><i class="md md-accessibility"></i></span></button></a> -->
 
-                   <!-- <form class="form-inline" role="form">
+
+                   <form class="form-inline" role="form">
                        <div class="form-group">
                            <input type="text" class="form-control" placeholder="Pays de départ">
                        </div>
@@ -27,7 +52,7 @@
                            <input type="date" class="form-control" placeholder="Date">
                        </div>
                        <button type="submit" class="btn btn-success waves-effect waves-light m-l-10 btn-md">Chercher Trajet</button>
-                   </form> -->
+                   </form>
             </div>
           </div>
           <br/>

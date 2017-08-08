@@ -1,0 +1,30 @@
+{%extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="row-title" style="text-align: center">Inscription</h2>
+<hr/>
+
+<form action="Utilisateurs" method="post">
+    {% csrf_token %}
+
+    <table>
+    {% for field in form %}
+    	<tr>
+    		<td>
+    			 {{ field.label_tag }}
+    		</td>
+    		<td>
+    			{{ field }}
+    		</td>
+    	</tr>
+    {% endfor %}
+      </table>
+
+
+   <div class = "col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-success ">Valider</button> 
+		</div>
+</form>
+
+{% endblock content %}
