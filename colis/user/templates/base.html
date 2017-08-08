@@ -1,0 +1,210 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+        <meta name="author" content="Coderthemes">
+
+        <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+
+        <title>Covalisage - Responsive Admin Dashboard Template</title>
+
+        <!--Morris Chart CSS -->
+        <link rel="stylesheet" href=" {% static "colis/assets/plugins/morris/morris.css" %}">
+
+        <link href=" {% static "colis/assets/css/bootstrap.min.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "colis/assets/css/core.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "colis/assets/css/components.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "colis/assets/css/icons.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "colis/assets/css/pages.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "colis/assets/css/menu.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "colis/assets/css/responsive.css" %}" rel="stylesheet" type="text/css" />
+
+
+        <link href="{% static "colis/assets/css/themify-icons.css" %}" rel="stylesheet">
+        <link href="{% static "colis/assets/css/dosis-font.css" %}" rel='stylesheet' type='text/css'>
+        <link href="{% static "colis/assets/css/style.css" %}" rel='stylesheet' type='text/css'>
+        <script src="{% static "colis/assets/js/modernizr.min.js" %}"></script>
+        {% endblock head %}
+    </head>
+
+    <body>
+        <!-- Navigation Bar-->
+        {% block header %}
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container">
+
+                    <!-- Logo container-->
+                    <div class="logo">
+                        <a href="Accueil" class="logo"><span>C<i
+                                class="md md-album"></i>valisage</span></a>
+                    </div>
+                    <!-- End Logo container-->
+                    <div class="menu-extras">
+                        <ul class="nav navbar-nav navbar-right pull-right">
+                            <li>
+                                <a href="/Inscription" class="dropdown-toggle waves-effect waves-light profile">Inscription </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-toggle waves-effect waves-light profile">Connexion </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        {% endblock header %}
+        <br/>
+            <br/>
+            <br/>
+        </header>
+
+        <!-- End Navigation Bar-->
+         
+        <div class="row"">
+            <div class="mybackground"></div>
+        </div>
+ {% block content %}
+        <!-- <div class="container">
+
+          <div class="row head3 ">
+            <div class="col-sm-12 ">
+
+                   <form class="form-inline" role="form">
+                       <div class="form-group">
+                           <input type="text" class="form-control" placeholder="Pays de départ">
+                       </div>
+
+                       <div class="form-group m-l-10">
+                           <input type="text" class="form-control" placeholder="Pays d'arrivée">
+                       </div>
+                       <div class="form-group m-l-10">
+                           <input type="date" class="form-control" placeholder="Date">
+                       </div>
+                       <button type="submit" class="btn btn-success waves-effect waves-light m-l-10 btn-md">Chercher Trajet</button>
+                   </form>
+            </div>
+          </div> -->
+
+          <!-- <div class="row me-row content-ct">
+            <h2 class="row-title">Pourquoi covaliser ?</h2>
+            <div class="col-md-4 feature">
+              <span class="ti-face-smile"></span>
+              <h3>Convivial</h3>
+              <p>Rendre service et partager ses frais</p>
+            </div>
+            <div class="col-md-4 feature">
+              <span class="ti-shine"></span>
+              <h3>Ecologique</h3>
+              <p>Réduction des gaz à effets de serre</p>
+            </div>
+            <div class="col-md-4 feature">
+              <span class="ti-world"></span>
+              <h3>Faites des rencontres!</h3>
+              <p>Rencontrez des gens de tous les horizons</p>
+            </div>
+          </div> -->
+
+             <!-- Start: Speakers -->
+        <!-- <div class="row me-row content-ct speaker">
+          <h2 class="row-title">Plusieurs départs chaque jour</h2>
+          <div class="col-md-4 col-sm-6 feature" style="background-color: #99ffcc">
+          <img src= "{% static "colis/assets/images/dakar.png" %}" class="speaker-img">
+
+            <h3>Paris - Dakar</h3>
+            <p>A partir de 10€ le kilo</p>
+          </div>
+          <div class="col-md-4 col-sm-6 feature" style="background-color: #99ffcc">
+            <img src="{% static "colis/assets/images/dakar.png" %}" class="speaker-img">
+            <h3>Londres - Douala</h3>
+            <p>A partir de 11€ le kilo</p>
+          </div>
+          <div class="col-md-4 col-sm-6 feature" style="background-color: #99ffcc">
+             <img src="{% static "colis/assets/images/dakar.png" %}" class="speaker-img">
+            <h3>Stockholm - Accra</h3>
+            <p>A partir de 13€ le kilo</p>
+          </div>
+        </div>
+ -->
+ {% endblock content %}
+          <!-- Start: Speakers -->
+        <div class="row me-row content-ct speaker">
+          <h2 class="row-title">Comment ça marche ?</h2>
+          <div class="col-md-4 col-sm-6 feature">
+           <img src="{% static "colis/assets/images/suitcase.png" %}" class="speaker-img">
+            <h3>Préparez votre colis</h3>
+            <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things...</p>
+          </div>
+          <div class="col-md-4 col-sm-6 feature">
+           <img src="{% static "colis/assets/images/entrust.png" %}" class="speaker-img">
+            <h3>Confiez votre colis</h3>
+            <p>Stephie is a user experience researcher and designer. In over 15 years of working on the web, she has worn many hats, including a product lead for a tech startup in publishing...</p>
+          </div>
+          <div class="col-md-4 col-sm-6 feature">
+          <img src="{% static "colis/assets/images/airplane.png" %}" class="speaker-img">
+            <h3>Et Hop, c'est parti !!!</h3>
+            <p>Harry is a freelance designer, developer, writer, speaker and front-end architect from the UK, previously working as Senior UI Developer for Sky. He Tweets at lcndqjncljdqjncdljn...</p>
+          </div>
+        </div>
+
+        </div>
+
+        <!-- jQuery  Thod_modif -->
+        <script src="{% static "colis/assets/js/jquery.min.js" %}"></script>
+        <script src="{% static "colis/assets/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "colis/assets/js/detect.js" %}"></script>
+        <!-- script src="assets/js/fastclick.js"></script-->
+        <script src="{% static "colis/assets/js/fastclick.js" %}"></script>
+
+       <!--  <script src="assets/js/jquery.slimscroll.js"></script> -->
+        <script src="{% static "colis/assets/js/jquery.slimscroll.js" %}"></script>
+        <!-- <script src="assets/js/jquery.blockUI.js"></script> -->
+        <script src="{% static "colis/assets/js/jquery.blockUI.js" %}"></script>
+        <!-- <script src="assets/js/waves.js"></script> -->
+        <script src="{% static "colis/assets/js/waves.js" %}"></script>
+        <!-- <script src="assets/js/wow.min.js"></script> -->
+        <script src="{% static "colis/assets/js/wow.min.js" %}"></script>
+        <!-- <script src="assets/js/jquery.nicescroll.js"></script> -->
+        <script src="{% static "colis/assets/js/jquery.nicescroll.js" %}"></script>
+        <!-- <script src="assets/js/jquery.scrollTo.min.js"></script> -->
+        <script src="{% static "colis/assets/js/jquery.scrollTo.min.js" %}"></script>
+
+        <!-- <script src="assets/plugins/peity/jquery.peity.min.js"></script> -->
+        <script src="{% static "colis/assets/plugins/peity/jquery.peity.min.js" %}"></script>
+
+        <!-- jQuery  -->
+        <!-- <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script> -->
+        <script src="{% static "colis/assets/plugins/waypoints/lib/jquery.waypoints.js" %}"></script>
+        <script src="{% static "colis/assets/plugins/counterup/jquery.counterup.min.js" %}"></script>
+
+        <script src="{% static "colis/assets/plugins/morris/morris.min.js" %}"></script>
+        <script src="{% static "colis/assets/plugins/raphael/raphael-min.js" %}"></script>
+
+        <script src="{% static "colis/assets/plugins/jquery-knob/jquery.knob.js" %}"></script>
+
+        <script src="{% static "colis/assets/pages/jquery.dashboard.js" %}"></script>
+
+        <script src="{% static "colis/assets/js/jquery.core.js" %}"></script>
+        <script src="{% static "colis/assets/js/jquery.app.js" %}"></script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('.counter').counterUp({
+                    delay: 100,
+                    time: 1200
+                });
+
+                $(".knob").knob();
+
+            });
+        </script>
+
+
+    </body>
+</html>
