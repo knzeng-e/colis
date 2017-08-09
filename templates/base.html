@@ -42,17 +42,17 @@
 
                     <!-- Logo container-->
                     <div class="logo">
-                        <a href="Accueil" class="logo"><span>C<i
+                        <a href = "{% url 'accueil' %}" class="logo"><span>C<i
                                 class="md md-album"></i>valisage</span></a>
                     </div>
                     <!-- End Logo container-->
                     <div class="menu-extras">
                         <ul class="nav navbar-nav navbar-right pull-right">
                             <li>
-                                <a href="/Inscription" class="dropdown-toggle waves-effect waves-light profile">Inscription </a>
+                                <a href="{% url 'new_inscription'%}" class="dropdown-toggle waves-effect waves-light profile">Inscription </a>
                             </li>
                             <li>
-                                <a href="" class="dropdown-toggle waves-effect waves-light profile">Connexion </a>
+                                <a href="{% url 'connexion'%}" class="dropdown-toggle waves-effect waves-light profile">Connexion </a>
                             </li>
                         </ul>
                     </div>

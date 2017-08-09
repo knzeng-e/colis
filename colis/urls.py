@@ -19,14 +19,10 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.home),
-	url(r'^Accueil$', views.home),
-	url(r'^Proposer$', views.proposer),
-    url(r'^Inscription$', views.inscription),
-    url(r'^Rechercher', include('user.urls')),
-	#url(r'^Inscription$', views.get_name),
-
-	url(r'^Test', views.test),
-
+	url(r'^Accueil$', views.home, name = 'accueil'),
+	url(r'^Proposer$', views.proposer, name = 'travel-add'),
+	url(r'^Utilisateurs$', views.profiles, name ='show-profiles'),
+    url(r'^user/', include('user.urls'), name = 'user_form'),
 
     url(r'^admin/', admin.site.urls),
 ]

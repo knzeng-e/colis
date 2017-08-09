@@ -11,6 +11,7 @@ GENDER_CHOICES = (
 class User(models.Model):
 	nom = models.CharField(max_length = 25, blank = False)
 	prenom =models.CharField(max_length = 25, blank = False)
+	user_name = models.CharField(max_length = 25)
 	date_de_naissance = models.DateField()
 	sexe = models.CharField(choices=GENDER_CHOICES, max_length=1)
 	telephone = models.PositiveIntegerField()
@@ -46,9 +47,6 @@ class Voyage(models.Model):
 	date_depart = models.DateField()
 	date_arrivee = models.DateField()
 	id_profil = models.ForeignKey('User')
-
-	def get_absolute_url(self):
-		return reverse('user:search_travel', kwargs = {'pk': self.pk})
 
 	def __str__(self):
 		return "%s %s -- %s -> %s" %(self.id_profil.prenom, self.id_profil.nom, self.lieu_depart, self.lieu_arrivee)

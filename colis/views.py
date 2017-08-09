@@ -8,15 +8,13 @@ def home(request):
 	return render(request, 'home.html')
 
 def proposer(request):
-	# pays = {
-	# 	'France': '+33',
-	# 	'Gabon': '+241',
-	# 	'Senegal': '+221'
-	# }
 	return render(request, 'proposer_trajet.html')
 
-def test(request):
+def profiles(request):
 	users = User.objects.all()
+			# return HttpResponseRedirect('/Inscription_Ok')
+		# else:
+			# form = InscriptionFor()
 	return render(request, 'test.html', {'users': users})
 
 #def get_name(request):
