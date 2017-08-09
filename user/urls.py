@@ -3,5 +3,8 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-	url(r'^$', views.inscription, name = 'inscription'),
+	url(r'^inscription$', views.inscription, name = 'new_inscription'),
+	url(r'^connexion$', views.UserFormView.as_view(), name = 'connexion'),
+	
 ]
+

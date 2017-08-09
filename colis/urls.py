@@ -21,8 +21,8 @@ urlpatterns = [
 	url(r'^$', views.home),
 	url(r'^Accueil$', views.home, name = 'accueil'),
 	url(r'^Proposer$', views.proposer, name = 'travel-add'),
-    url(r'^Inscription', include('user.urls'), name = 'inscription'),
 	url(r'^Utilisateurs$', views.profiles, name ='show-profiles'),
+    url(r'^user/', include('user.urls'), name = 'user_form'),
 
     url(r'^admin/', admin.site.urls),
 ]

@@ -11,6 +11,7 @@ GENDER_CHOICES = (
 class User(models.Model):
 	nom = models.CharField(max_length = 25, blank = False)
 	prenom =models.CharField(max_length = 25, blank = False)
+	user_name = models.CharField(max_length = 25)
 	date_de_naissance = models.DateField()
 	sexe = models.CharField(choices=GENDER_CHOICES, max_length=1)
 	telephone = models.PositiveIntegerField()
