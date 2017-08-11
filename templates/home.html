@@ -9,13 +9,13 @@
                     <!-- Logo container-->
                     <div class="logo">
                         <a href="Accueil" class="logo"><span>C<i
-                                class="md md-album"></i>valisage</span></a>
+                                class="md md-album"></i>lis-libre</span></a>
                     </div>
                     <!-- End Logo container-->
                     <div class="menu-extras">
                         <ul class="nav navbar-nav navbar-right pull-right">
                             <li>
-                                <a href = "{% url 'travel-add'%}" ><button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light profile">Proposer un trajet<span class="m-l-5"><i class="md md-accessibility"></i></span></button></a>
+                                <a href = "{% url 'travel-add'%}" ><button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light profile">Transporter un colis<span class="m-l-5"><i class="md md-accessibility"></i></span></button></a>
                             </li>
                             <li>
                                 <a href="{% url 'new_inscription'%}" class="dropdown-toggle waves-effect waves-light profile">Inscription </a>
@@ -40,18 +40,19 @@
                      <!--    <a href="/Rechercher"><button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light profile">E n v o y e r    <span class="m-l-5"><i class="md md-accessibility"></i></span></button></a> -->
 
 
-                   <form class="form-inline" role="form">
+                   <form action = "{% url 'transporteur' %}" method = "post" class="form-inline" role="form">
+                   {% csrf_token %}
                        <div class="form-group">
-                           <input type="text" class="form-control" placeholder="Pays de départ">
+                           <input type="text" class="form-control" placeholder="Pays de départ" name = "lieu_depart">
                        </div>
 
                        <div class="form-group m-l-10">
-                           <input type="text" class="form-control" placeholder="Pays d'arrivée">
+                           <input type="text" class="form-control" placeholder="Pays d'arrivée" name = "lieu_arrivee">
                        </div>
                        <div class="form-group m-l-10">
-                           <input type="date" class="form-control" placeholder="Date">
+                           <input type="date" class="form-control" placeholder="Date" name = "date">
                        </div>
-                       <button type="submit" class="btn btn-success waves-effect waves-light m-l-10 btn-md">Chercher Trajet</button>
+                       <button type="submit" class="btn btn-success waves-effect waves-light m-l-10 btn-md">Trouver un transporter</button>
                    </form>
             </div>
           </div>

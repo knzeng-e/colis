@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<hr>
+<h2 style="text-align: center"><em>Voyages {{depart}} --> {{arrivee}} du {{travel_date}} </em></h2>
+<hr>
+{% for travels in result %}
+	{{travels}}  <br/>
+{% endfor %}
+{% endblock %}

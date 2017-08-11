@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import *
 from .forms import InscriptionForm
@@ -47,4 +47,18 @@ class UserFormView(View):
 					return redirect('accueil')
 
 		return render(request, self.template_name, {'form': form})
+
+def listeTransporteurs(request):
+
+	search = request.POST
+	result = Voyage.objects.all()
+	print "Ville de depart ==> " + search['lieu_depart'] + "\nVille d'arrivee ==> " + search['lieu_arrivee']
+	depart = search['lieu_depart']
+	arrivee = search['lieu_arrivee']
+	travel_date = search['date']
+	result = result.filter(lieu_depart = depart).filter(lieu_arrivee = arrivee).filter(date_depart = travel_date)
+	# result = get_object_or_404(Voyage, lieu_depart = depart, lieu_arrivee = arrivee, date_depart = travel_date)
+	print result
+
+	return render(request, 'show_travels.html', locals())
 
